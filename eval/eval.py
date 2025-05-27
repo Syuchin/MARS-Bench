@@ -456,4 +456,4 @@ def main():
 if __name__ == "__main__":
     main()
 
-# python eval.py --input /MARS-Bench/result/chat-result/chat_TS_NHL.json --output /MARS-Bench/result/eval-result/TS_NHL-eval.json
+# python eval.py --input /MARS-Bench/result/chat-result/chat-test.json --output /MARS-Bench/result/eval-result/chat-test-eval.json
