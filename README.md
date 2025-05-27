@@ -51,19 +51,19 @@ You can quick start like this:
 2️⃣ Run a single-game demo:
 
 ```bash
-python chat/demo.py --model_name deepseek-chat --game_id 166909 --data_path data/Questions/IF-NBAzh-Dialogue.jsonl
+python chat/demo.py --model_name deepseek-chat --game_id 166909 --data_path data/Context_Retrieval.jsonl
 ```
 
 3️⃣ Process a specific data file:
 
 ```bash
-python chat/chat.py --input_file data/Questions/IF-NBAzh-Dialogue.jsonl --model_name deepseek-chat
+python chat/chat.py --input_file data/Context_Retrieval.jsonl --output_path result/chat-result/chat-test.json --model_name deepseek-chat
 ```
 
 4️⃣ Conduct evaluation:
 
 ```bash
-python eval/eval.py --input result/chat-result/demo.json --output result/eval-result/demo-eval.json --model_name deepseek-chat
+python eval/eval.py --input result/chat-result/chat-test.json --output result/eval-result/chat-test-eval.json
 ```
 
 ---
@@ -83,7 +83,7 @@ python eval/eval.py --input result/chat-result/demo.json --output result/eval-re
 
 ### data
 
-* `Questions/`: JSON/JSONL files with questions and dialogue data.
+* `*.jsonl`: JSONL files with dialogue data of different tasks.
 
 ### config
 
