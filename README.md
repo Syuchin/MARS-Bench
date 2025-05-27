@@ -17,7 +17,7 @@
 
 <div align="center">
 
-Chenghao Yang<sup style="color:#8a2be2;">1,2</sup><sup style="color:#ff6b6b;">*</sup><sup style="color:#4ecdc4;">‡</sup>, Yinbo Luo<sup style="color:#4682b4;">2</sup><sup style="color:#ff6b6b;">*</sup>, Zhoufutu Wen<sup style="color:#8a2be2;">1</sup><sup style="color:#2e8b57;">†</sup>, Qi Chu<sup style="color:#4682b4;">2</sup><sup style="color:#2e8b57;">†</sup>, Tao Gong<sup style="color:#4682b4;">2</sup>, Longxiang Liu<sup style="color:#8a2be2;">1</sup>, Kaiyuan Zhang<sup style="color:#8a2be2;">1</sup>, Jianpeng Jiao<sup style="color:#8a2be2;">1</sup>, Ge Zhang<sup style="color:#8a2be2;">1</sup>, Wenhao Huang<sup style="color:#8a2be2;">1</sup>, Nenghai Yu<sup style="color:#4682b4;">2</sup>
+Chenghao Yang<sup style="color:#8a2be2;">1,2</sup><sup style="color:#ff6b6b;">\*</sup><sup style="color:#4ecdc4;">‡</sup>, Yinbo Luo<sup style="color:#4682b4;">2</sup><sup style="color:#ff6b6b;">\*</sup>, Zhoufutu Wen<sup style="color:#8a2be2;">1</sup><sup style="color:#2e8b57;">†</sup>, Qi Chu<sup style="color:#4682b4;">2</sup><sup style="color:#2e8b57;">†</sup>, Tao Gong<sup style="color:#4682b4;">2</sup>, Longxiang Liu<sup style="color:#8a2be2;">1</sup>, Kaiyuan Zhang<sup style="color:#8a2be2;">1</sup>, Jianpeng Jiao<sup style="color:#8a2be2;">1</sup>, Ge Zhang<sup style="color:#8a2be2;">1</sup>, Wenhao Huang<sup style="color:#8a2be2;">1</sup>, Nenghai Yu<sup style="color:#4682b4;">2</sup>
 
 <sup style="color:#8a2be2;">1</sup>ByteDance Seed, <sup style="color:#4682b4;">2</sup>University of Science and Technology of China
 
