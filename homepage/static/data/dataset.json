@@ -1,0 +1,51 @@
+[
+  {
+    "name": "Instruction Following",
+    "description": "Tasks that evaluate the model's ability to follow complex, multi-step instructions across dialogue turns\n评估模型在多轮对话中遵循复杂、多步骤指令的能力",
+    "example": "Turn 1: Please track the Lakers' scoring in the first quarter.\nTurn 5: Now compare it with their second quarter performance.\nTurn 8: Based on this analysis, predict their likely strategy for the third quarter.",
+    "type": "instruction-following",
+    "language": "English"
+  },
+  {
+    "name": "Context Retrieval",
+    "description": "Tasks requiring retrieval of information scattered across distant dialogue turns\n需要检索分散在远距离对话轮次中信息的任务",
+    "example": "Turn 2: The Lakers scored 28 points in Q1\nTurn 15: What was mentioned about Lakers' Q1 performance earlier?\nModel must retrieve information from Turn 2 to answer correctly.",
+    "type": "context-retrieval",
+    "language": "English"
+  },
+  {
+    "name": "Information Reasoning",
+    "description": "Tasks that require reasoning over multiple pieces of information from different turns\n需要对来自不同轮次的多个信息片段进行推理的任务",
+    "example": "Turn 3: Player A scored 15 points in Q1\nTurn 7: Player A scored 12 points in Q2\nTurn 12: What's Player A's average points per quarter so far?",
+    "type": "information-reasoning",
+    "language": "English"
+  },
+  {
+    "name": "Task Switching",
+    "description": "Tasks that evaluate the model's ability to adapt when task requirements change mid-dialogue\n评估模型在对话中任务要求发生变化时的适应能力",
+    "example": "Turn 1-5: Summarizing game statistics\nTurn 6: Now switch to analyzing team strategy instead\nModel must recognize and adapt to the new task focus.",
+    "type": "task-switching",
+    "language": "English"
+  },
+  {
+    "name": "Ultra Multi-turn Dialogues",
+    "description": "Extended conversations with over 30 turns, capturing instruction shifts and contextual evolution\n超过30轮的扩展对话，捕捉指令转换和上下文演变",
+    "example": "Real-world sports commentary dialogues with continuous context building, task switches, and long-range dependencies across 30+ turns.",
+    "type": "ultra-multi-turn",
+    "language": "Bilingual"
+  },
+  {
+    "name": "Cross-turn Tasks",
+    "description": "Tasks requiring reasoning over non-adjacent information spread across dialogue history\n需要对分散在对话历史中的非相邻信息进行推理的任务",
+    "example": "Information from Turn 5, 12, and 25 must be combined to answer a question in Turn 30, testing long-range dependency handling.",
+    "type": "cross-turn",
+    "language": "English"
+  },
+  {
+    "name": "Interactive Multi-turn Generation",
+    "description": "Real-time response generation where LLMs must respond at every turn\n实时响应生成，LLM必须在每一轮都做出回应",
+    "example": "Models receive dialogue history incrementally and must generate appropriate responses at each turn, simulating realistic user interactions.",
+    "type": "interactive-multi-turn",
+    "language": "Bilingual"
+  }
+] 

@@ -1,0 +1,44 @@
+# MARS-Bench Configuration File
+
+# API Related Configuration
+# Please fill in the API keys you obtained for each model here.
+# If the api_key for a model is not filled in, that model will not be listed as available when running chat.py.
+api:
+  openai:
+    api_key: "your_api_key" 
+    base_url: "https://api.openai.com/v1"
+  deepseek:
+    api_key: "your_api_key"
+    api_url: "https://api.deepseek.com/v1/chat/completions"
+  anthropic:
+    api_key: "your_api_key"
+    api_url: "https://api.anthropic.com/v1/messages"
+
+# Model Specific Configuration (Optional, for future expansion)
+# You can define more detailed parameters for each model or model family here.
+# Currently, chat.py mainly determines model availability through api.<provider>.api_key,
+# but future model loaders (e.g., models/openai_api.py) can read configurations from here.
+model_specific_configs:
+
+
+# Default Values for General Chat Parameters
+# These parameters may be used or overridden by specific implementations in models/xxx_api.py.
+chat_defaults:
+  max_tokens: 2048
+  temperature: 0.7
+  top_p: 1.0
+  frequency_penalty: 0.0
+  presence_penalty: 0.0
+  max_retries: 3
+  retry_delay: 5
+  max_retry_delay: 60
+
+# Evaluation Related Configuration (for eval.py)
+evaluation:
+  metrics:
+    - accuracy
+    - precision
+    - recall
+    - f1_score
+  # You can add other evaluation-related parameters
+  # default_eval_output_dir: "eval/results" # Example

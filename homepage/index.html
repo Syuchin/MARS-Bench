@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MARS-Bench</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://kit.fontawesome.com/f8ddf9854a.js" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <meta name="description"
+          content="A Real-World Multi-Turn Dialogue Benchmark for LLM Evaluation">
+    <meta name="keywords" content="Multi-turn Dialogue; Sports Commentary; LLM Evaluation; Reasoning">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MARS-Bench: A Real-World Multi-Turn Dialogue Benchmark for LLM Evaluation</title>
+
+    <link rel="icon" href="./static/images/icon.png">
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    
+    <script src="https://kit.fontawesome.com/eaf1856e6f.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+    <script src="./static/js/case.js"></script>
+    <script src="./static/js/statistic.js"></script>
+    <script src="./static/js/pdf.js"></script>
+  </head>
+  <body>
+
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <h1 class="title is-1 publication-title is-bold">
+                <img src="static/images/title.png" style="width:1100em;vertical-align: middle" alt="MARS-Bench Logo"/>
+              </h1>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">
+                    Chenghao Yang<sup style="color:#8a2be2;">1,2</sup><sup style="color:#ff6b6b;">*</sup><sup style="color:#4ecdc4;">‡</sup>,
+                </span>
+                <span class="author-block">
+                    Yinbo Luo<sup style="color:#4682b4;">2</sup><sup style="color:#ff6b6b;">*</sup>,
+                </span>
+                <span class="author-block">
+                  Zhoufutu Wen<sup style="color:#8a2be2;">1</sup><sup style="color:#2e8b57;">†</sup>,
+                </span>
+                <span class="author-block">
+                  Qi Chu<sup style="color:#4682b4;">2</sup><sup style="color:#2e8b57;">†</sup>,
+                </span>
+                <span class="author-block">
+                  Ge Zhang<sup style="color:#8a2be2;">1</sup>,
+                </span>
+                <span class="author-block">
+                  Tao Gong<sup style="color:#4682b4;">2</sup>,
+                </span>
+                <span class="author-block">
+                  Longxiang Liu<sup style="color:#8a2be2;">1</sup>,
+                </span>
+                <span class="author-block">
+                  Kaiyuan Zhang<sup style="color:#8a2be2;">1</sup>,
+                </span>
+                <span class="author-block">
+                  Jianpeng Jiao<sup style="color:#8a2be2;">1</sup>,
+                </span>
+                <span class="author-block">
+                  Wenhao Huang<sup style="color:#8a2be2;">1</sup>,
+                </span>
+                <span class="author-block">
+                  Nenghai Yu<sup style="color:#4682b4;">2</sup>
+                </span>
+                
+
+            </div>
+              <br>
+
+              <div class="is-size-5 publication-authors">
+                <span class="author-block"><sup style="color:#8a2be2;">1</sup>ByteDance Seed,</span>
+                <span class="author-block"><sup style="color:#4682b4;">2</sup>University of Science and Technology of China</span>
+              </div>
+
+              <br>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block"><sup style="color:#ff6b6b;">*</sup>Equal Contribution</span><br>
+                <span class="author-block"><sup style="color:#4ecdc4;">‡</sup>Work done at ByteDance Seed</span><br>
+                <span class="author-block"><sup style="color:#2e8b57;">†</sup>Corresponding Authors</span>
+              </div>
+
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <span class="link-block">
+                    <a href="https://arxiv.org/abs/2505.14552" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>arXiv</span>
+                    </a>
+                  </span>
+                  <span class="link-block">
+                    <a href="https://github.com/syuchin/MARS-Bench" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code</span>
+                    </a>
+                  </span>
+                  <span class="link-block">
+                    <a href="#leaderboard" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fa-solid fa-trophy"></i>
+                      </span>
+                      <span>Leaderboard</span>
+                    </a>
+                  </span>
+                  <span class="link-block">
+                    <a href="#dataset" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fa-solid fa-database"></i>
+                      </span>
+                      <span>Task Categories</span>
+                    </a>
+                  </span>
+                  <span class="link-block">
+                    <a href="#attention-visualization" class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fa-solid fa-eye"></i>
+                      </span>
+                      <span>Attention Visualization</span>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>  
+
+    <section class="hero teaser">
+        <div class="container is-max-desktop">
+          <div class="has-text-centered">
+            <img src="static/images/overview.png" alt="MARS-Bench Overview" style="max-width: 90%; height: auto;">
+          </div>
+
+        </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="margin-bottom: 2vh;">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Introduction</h2>
+            <div class="content has-text-justified">
+              <p>
+                Large Language Models (LLMs) have achieved remarkable progress in conversational AI, yet their robustness remains limited when handling complex multi-turn dialogues that require retrieving evidence from distant utterances and reasoning across scattered information while adapting to frequent task switches. To address gaps in existing benchmarks that focus on short conversations or provide full dialogue history upfront, we propose <strong>MARS-Bench</strong>, a multi-turn dialogue benchmark constructed from real-world play-by-play sports data. MARS-Bench emphasizes three key features: <strong>Ultra Multi-turn Dialogues</strong> with over 30 turns per instance, <strong>Cross-turn Tasks</strong> requiring reasoning over non-adjacent information, and <strong>Interactive Multi-turn Generation</strong> where LLMs must respond at every turn. The benchmark defines four core tasks: Instruction Following (IF), Context Retrieval (CR), Information Reasoning (IR), and Task Switching (TS).
+              </p>
+            </div>
+          </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- DATASET SECTION -->
+    <section class="hero is-light is-small">
+      <div class="hero-body has-text-centered">
+        <h1 class="title is-1 kor">
+          <span class="kor">📖 Dataset Process Pipeline</span>
+        </h1>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="columns is-centered is-vcentered">
+          <!-- Data Format Column -->
+          <div class="column is-half">
+            <div class="content has-text-centered">
+              <figure class="image" style="margin-bottom: 1.5rem;">
+                <img src="static/images/data_format.png" alt="MARS-Bench Data Format" style="max-width: 90%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-left: auto; margin-right: auto;">
+              </figure>
+              <h4 class="title is-5 has-text-weight-semibold">Overview of the Data Format</h4>
+              <p class="has-text-justified is-size-6">
+                Each sample in MARS-Bench includes (1) detailed play-by-play records, (2) team rosters, and (3) player statistics. The play-by-play records and team rosters serve as direct inputs for the language models, while player statistics are utilized for verifying the correctness of model-generated answers, ensuring a robust evaluation framework.
+              </p>
+            </div>
+          </div>
+          <!-- Data Construction Pipeline Column -->
+          <div class="column is-half">
+            <div class="content has-text-centered">
+              <figure class="image" style="margin-bottom: 1.5rem;">
+                <img src="static/images/data_pipeline.png" alt="MARS-Bench Data Construction Pipeline" style="max-width: 90%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-left: auto; margin-right: auto;">
+              </figure>
+              <h4 class="title is-5 has-text-weight-semibold">Overview of the Data Construction Pipeline</h4>
+              <p class="has-text-justified is-size-6">
+                The construction of MARS-Bench follows a meticulous three-stage pipeline: (1) <strong>Data Collection</strong>, where comprehensive sports data, including game events and commentary, is gathered; (2) <strong>Question Construction</strong>, which involves the careful generation of (Question, Answer, Checklist) triplets designed to probe various reasoning and dialogue capabilities; and (3) <strong>Quality Assurance</strong>, entailing a thorough review process to ensure the correctness, clarity, and appropriate difficulty level of all benchmark tasks.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESULTS SECTION -->
+    <section id="leaderboard" class="hero is-light is-small">
+      <div class="hero-body has-text-centered">
+        <h1 class="title is-1 kor">
+          <span class="kor">🏅Leaderboard</span>
+        </h1>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="columns is-centered m-6">
+          <div class="column is-full has-text-centered content">
+            <div class="content has-text-justified">
+              <p>
+                We evaluated 23 representative models on MARS-Bench, including both closed-source and open-source LLMs with and without explicit reasoning capabilities.
+              </p>
+            </div>
+            <br>
+            <div class="model-labels-container">
+              <span class="leaderboard-label reasoning-model-label">Reasoning Models</span>
+              <span class="leaderboard-label standard-model-label">Standard Models</span>
+            </div>
+            <br>
+            <div class="leaderboard-container">
+              <div class="table-wrapper">
+            <div class="table_header" id="toggle-model-type">
+              Segment: overall (Tap to switch to task-specific)
+            </div>
+            <table id="mars-bench-table" class="table is-fullwidth is-striped">
+              <thead>
+                <tr><!-- JS 会在这里动态插入 <th> --></tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+            </div>
+            <div class="leaderboard-annotations has-text-left" style="margin-top: 1rem; font-size: 0.9rem;">
+              <p><strong>Annotations:</strong></p>
+              <ul style="list-style-type: none; padding-left: 0;">
+                <li>🥇: Top 1 on Overall Score</li>
+                <li>🥈: Top 2 on Overall Score</li>
+                <li>🥉: Top 3 on Overall Score</li>
+                <li><strong>Bold</strong>: Top 1 on task-specific scores</li>
+                <li><u>Underlined</u>: Top 2 on task-specific scores</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experiment-results" class="hero is-light is-small">
+      <div class="hero-body has-text-centered">
+        <h1 class="title is-1 kor">
+          <span class="kor">💡 Experiment Results</span>
+        </h1>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <p class="has-text-centered is-size-6 has-text-grey" style="margin-bottom: 2rem;">
+          Based on the evaluation results of various representative models on MARS-Bench, we summarize the following key observations.
+        </p>
+        <div class="columns is-multiline is-centered">
+          <div class="column is-half">
+            <div class="box task-card" style="height: 100%;">
+              <h3 class="title is-4 has-text-weight-semibold">LLMs Struggle in Complex Multi-turn Dialogues</h3>
+              <p class="task-desc">Even top models achieve around 70 points, with performance decreasing as dialogue turns increase. This highlights limitations in handling extended multi-turn interactions. Lower scores on Instruction Following (IF), Information Reasoning (IR), and particularly Task Switching (TS) tasks further underscore deficiencies in cross-turn context management and interactive scenarios.</p>
+            </div>
+          </div>
+          <div class="column is-half">
+            <div class="box task-card" style="height: 100%;">
+              <h3 class="title is-4 has-text-weight-semibold">Closed-Source Models Lead in Complex Multi-Turn Scenarios</h3>
+              <p class="task-desc">In challenging multi-turn dialogue tasks, closed-source models consistently outperform open-source counterparts. For example, Google's Gemini-2.5-Pro achieves a 72.44 overall on MARS-Bench, while the top open-source DeepSeek-R1 reaches just 45.42. Open-source models often lack the scale and targeted optimization needed for intricate information reasoning and task-switching.</p>
+            </div>
+          </div>
+          <div class="column is-half">
+            <div class="box task-card" style="height: 100%;">
+              <h3 class="title is-4 has-text-weight-semibold">Reasoning Models Demonstrate Greater Performance</h3>
+              <p class="task-desc">Models with chain-of-thought reasoning tend to engage in more deliberate, System 2-style inference, exhibiting higher consistency and correctness. In contrast, models relying on System 1-style heuristic generation are more susceptible to variations in task complexity and context, leading to weaker overall performance. For instance, DeepSeek-R1 (45.42) outperforms DeepSeek-V3 (37.31) by 8.11 points overall, and by over 12 points on information reasoning (40.01 vs. 27.70).</p>
+            </div>
+          </div>
+          <div class="column is-half">
+            <div class="box task-card" style="height: 100%;">
+              <h3 class="title is-4 has-text-weight-semibold">Models Perform Worse on the Instruction Following Task</h3>
+              <p class="task-desc">Both reasoning-enhanced and standard models show relatively poor performance on instruction following. Current models struggle to track turn-level structures as required by system prompts, often failing to produce the correct output in the specified dialogue turn. This suggests limitations in aligning generation behavior with round-dependent instructions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== DATASET SECTION ====== -->
+     <section id="dataset"  class="hero is-light is-small">
+      <div class="hero-body has-text-centered">
+        <h1 class="title is-1 kor">
+          <span class="kor">📊 Task Categories</span>
+        </h1>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+
+        <!-- Dataset Section: 展示每个Task的详细信息 -->
+        <p class="has-text-centered is-size-6 has-text-grey" style="margin-bottom: 2rem;">
+          Each game segment/period refers to one of the three periods in NHL games or one of the four quarters in NBA games (excluding overtime).
+        </p>
+        <div class="columns is-multiline">
+          <div class="column is-half">
+            <div class="box task-card">
+              <h3 class="title is-4 has-text-weight-semibold">Instruction Following</h3>
+              <p class="task-desc">Follow turn-specific instructions with format constraints.</p>
+              <div class="subtask-group-container">
+                <div class="subtask">
+                  <div class="subtask-info"><b>Fixed-format Single-Turn Response:</b> Follow the format specified for the current dialogue turn.</div>
+                  <div class="subtask-actions">
+                    <div class="subtask-count"><span class="tag is-info is-light">1 / period</span></div>
+                    <button class="button is-small is-link is-outlined view-example-button" data-example-key="fixed-format-single-turn-response">View Example</button>
+                  </div>
+                </div>
+                <div class="subtask">
+                  <div class="subtask-info"><b>Turn-conditioned Prompted Formatting:</b> Adapt the response format according to system instructions at each turn.</div>
+                  <div class="subtask-actions">
+                    <div class="subtask-count"><span class="tag is-info is-light">8 / period</span></div>
+                    <button class="button is-small is-link is-outlined view-example-button" data-example-key="turn-conditioned-prompted-formatting">View Example</button>
+                  </div>
+                </div>
+                <div class="subtask">
+                  <div class="subtask-info"><b>Turn-conditioned Inferred Formatting:</b> Adjust the response format based on instructions inferred from prior dialogue turns.</div>
+                  <div class="subtask-actions">
+                    <div class="subtask-count"><span class="tag is-info is-light">1 / period</span></div>
+                    <button class="button is-small is-link is-outlined view-example-button" data-example-key="turn-conditioned-inferred-formatting">View Example</button>
+                  </div>
+                </div>
+              </div> <!-- Closing subtask-group-container for Instruction Following -->
+            </div>
+          </div>
+          <div class="column is-half">
+            <div class="box task-card">
+              <h3 class="title is-4 has-text-weight-semibold">Context Retrieval</h3>
+              <p class="task-desc">Locate and retrieve factual information from previous dialogue turns.</p>
+              <div class="subtask-group-container">
+                <div class="subtask">
+                  <div class="subtask-info"><b>Anchored Event Retrieval:</b> Given a time anchor and interval, retrieve a specific event.</div>
+                  <div class="subtask-actions">
+                    <div class="subtask-count"><span class="tag is-info is-light">2 / period</span></div>
+                    <button class="button is-small is-link is-outlined view-example-button" data-example-key="anchored-event-retrieval">View Example</button>
+                  </div>
+                </div>
+                <div class="subtask">
+                  <div class="subtask-info"><b>Interval-based Event Retrieval:</b> Given a start and end time, retrieve events of a specific type.</div>
+                  <div class="subtask-actions">
+                    <div class="subtask-count"><span class="tag is-info is-light">1 / period</span></div>
+                    <button class="button is-small is-link is-outlined view-example-button" data-example-key="interval-based-event-retrieval">View Example</button>
+                  </div>
+                </div>
+              </div> <!-- Closing subtask-group-container for Context Retrieval -->
+            </div>
+          </div>
+          <div class="column is-half">
+            <div class="box task-card">
+              <h3 class="title is-4 has-text-weight-semibold">Information Reasoning</h3>
+              <p class="task-desc">Aggregate and reason over distributed contextual information.</p>
+              <div class="subtask-group-container">
+                <div class="subtask">
+                  <div class="subtask-info"><b>Current Score Tracking:</b> Provide the current score for both teams.</div>
+                  <div class="subtask-actions">
+                    <div class="subtask-count"><span class="tag is-info is-light">1 (last period)</span></div>
+                    <button class="button is-small is-link is-outlined view-example-button" data-example-key="score-tracking">View Example</button>
+                  </div>
+                </div>
+                <div class="subtask">
+                  <div class="subtask-info"><b>Score Lead Fluctuation Detection:</b> Identify the number and timing of score lead changes between the two teams within a given time period.</div>
+                  <div class="subtask-actions">
+                    <div class="subtask-count"><span class="tag is-info is-light">1 / period</span></div>
+                    <button class="button is-small is-link is-outlined view-example-button" data-example-key="score-lead-fluctuation-detection">View Example</button>
+                  </div>
+                </div>
+                <div class="subtask">
+                  <div class="subtask-info"><b>Player Performance Impact Analysis:</b> Given a time span, analyze how a change in a player's performance affected the game situation.</div>
+                  <div class="subtask-actions">
+                    <div class="subtask-count"><span class="tag is-info is-light">2 / period</span></div>
+                    <button class="button is-small is-link is-outlined view-example-button" data-example-key="player-performance-impact-analysis">View Example</button>
+                  </div>
+                </div>
+              </div> <!-- Closing subtask-group-container for Information Reasoning -->
+            </div>
+          </div>
+          <div class="column is-half">
+            <div class="box task-card">
+              <h3 class="title is-4 has-text-weight-semibold">Task Switching</h3>
+              <p class="task-desc">Handle abrupt interleaving of unrelated queries.</p>
+              <div class="subtask-group-container">
+                <div class="subtask">
+                  <div class="subtask-info"><b>In-context Reasoning Query:</b> Ask questions related to the match.</div>
+                  <div class="subtask-actions">
+                    <div class="subtask-count"><span class="tag is-info is-light">3 / period</span></div>
+                    <button class="button is-small is-link is-outlined view-example-button" data-example-key="score-tracking">View Example</button> 
+                  </div>
+                </div>
+                <div class="subtask">
+                  <div class="subtask-info"><b>Out-of-context Math Query:</b> Ask unrelated mathematical questions from MathQA.</div>
+                  <div class="subtask-actions">
+                    <div class="subtask-count"><span class="tag is-info is-light">3 / period</span></div>
+                    <button class="button is-small is-link is-outlined view-example-button" data-example-key="out-of-context-math-query">View Example</button>
+                  </div>
+                </div>
+              </div> <!-- Closing subtask-group-container for Task Switching -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== ATTENTION VISUALIZATION ANALYSIS SECTION ====== -->
+    <section id="attention-visualization" class="hero is-light is-small">
+      <div class="hero-body has-text-centered">
+        <h1 class="title is-1 kor">
+          <span class="kor">🔬 Attention Visualization Analysis</span>
+        </h1>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+            <div class="content has-text-justified">
+              <p>
+                To better understand how Large Language Models process multi-turn dialogues, we conducted an attention visualization analysis on <code>Qwen2.5-7B-Instruct</code>. This helps reveal how the structure of the input (e.g., number of turns, presence of special tokens) influences where the model focuses its attention during text generation.
+              </p>
+              
+              <h4 class="title is-5" style="margin-top: 2rem;">Key Findings:</h4>
+              <ul>
+                <li>
+                  <strong>Impact of Dialogue Turns:</strong> As the number of dialogue turns increases (from 1 to 10, then to 20 turns), the model's attention towards key semantic content within the dialogue history tends to decrease. This observation aligns with the performance degradation in longer dialogues, suggesting that an increased number of turns might hinder effective context integration.
+                </li>
+                <li>
+                  <strong>Attention to Special Tokens:</strong> Multi-turn dialogues inherently require more special tokens (e.g., to denote the end of a turn like <code>&lt;|im_end|&gt;</code>). Our analysis shows that these special tokens can attract a disproportionately high amount of attention. This might divert the model's focus from the actual meaningful content, potentially impacting task performance.
+                </li>
+              </ul>
+              <p>
+                The attention visualizations below illustrate these patterns. 
+                One visualization highlights how special tokens, such as turn separators (e.g., <code>&lt;|im_end|&gt;</code>), can become hotspots for model attention. 
+                Another demonstrates that as dialogues become longer, the model's attention to crucial semantic content tends to diminish. 
+                These insights suggest that the input structure for multi-turn dialogues significantly affects model behavior and performance.
+              </p>
+
+              <figure style="margin-top: 2.5rem; margin-bottom: 2.5rem;">
+                <img src="static/images/attention2.png" alt="Attention visualization: Special tokens absorbing disproportionate attention" style="width:100%; max-width:700px; display:block; margin-left:auto; margin-right:auto; border: 1px solid #dbdbdb; border-radius: 4px;">
+                <figcaption class="has-text-centered" style="margin-top: 0.75rem; font-size: 0.9em; color: #555;">
+                  <strong>Figure 1: Attention on Special Tokens in <code>Qwen2.5-7B-Instruct</code>.</strong>
+                  Multi-turn inputs introduce a higher volume of special tokens (e.g., <code>&lt;|im_end|&gt;</code>), which are observed to absorb a substantial portion of the model's attention, potentially reducing focus on semantic content.
+                </figcaption>
+              </figure>
+
+              <figure style="margin-top: 2.5rem; margin-bottom: 2.5rem;">
+                <img src="static/images/attention1.png" alt="Attention visualization: Diminishing attention to key content in longer dialogues" style="width:100%; max-width:700px; display:block; margin-left:auto; margin-right:auto; border: 1px solid #dbdbdb; border-radius: 4px;">
+                <figcaption class="has-text-centered" style="margin-top: 0.75rem; font-size: 0.9em; color: #555;">
+                  <strong>Figure 2: Attention Decay on Key Content in <code>Qwen2.5-7B-Instruct</code>.</strong>
+                  The model's attention to essential semantic information within the dialogue history is shown to decrease as the number of turns increases, suggesting a degraded focus in extended conversations.
+                </figcaption>
+              </figure>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BibTeX -->
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <h2 class="title is-3 has-text-centered">BibTeX</h2>
+        <pre><code>
+          @misc{MARSBench,
+          title={MARS-Bench: A Real-World Multi-Turn Dialogue Benchmark for LLM Evaluation}, 
+          author={}, 
+          year={2025},
+          eprint={2505.14552},
+          archivePrefix={arXiv},
+          primaryClass={cs.CL},
+          url={https://arxiv.org/abs/2505.14552}, 
+      }
+    </code></pre>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is adapted from <a href="https://kor-bench.github.io/">KORBench</a>, <a href="https://nerfies.github.io/">Nerfies</a> and <a href="https://mathvista.github.io/">MathVista</a>, licensed under a <a rel="license"
+                                                  href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+              Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modal for Task Examples -->
+    <div id="exampleModal" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title" id="exampleModalTitle">Task Example</p>
+          <button class="delete" aria-label="close" id="exampleModalClose"></button>
+        </header>
+        <section class="modal-card-body">
+          <div class="content">
+            <h4 class="title is-5">Question:</h4>
+            <pre><code id="exampleModalQuestion"></code></pre>
+            <h4 class="title is-5" style="margin-top: 1.5rem;">Answer:</h4>
+            <pre><code id="exampleModalAnswer"></code></pre>
+            <h4 class="title is-5" style="margin-top: 1.5rem;">Checklist:</h4>
+            <pre><code id="exampleModalChecklist"></code></pre>
+          </div>
+        </section>
+      </div>
+    </div>
+    <!-- End Modal -->
+
+  </body>
+</html>

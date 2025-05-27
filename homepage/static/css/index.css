@@ -1,0 +1,770 @@
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.footer .icon-link {
+  font-size: 25px;
+  color: #000;
+}
+
+.link-block a {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.kor-bench-logo {
+  width: 1em;
+  vertical-align: middle;
+}
+
+.kor-bench {
+  font-variant: small-caps;
+  font-weight: bold;
+}
+
+.reasoning-model-row {
+  background-image: linear-gradient(145deg, rgba(204, 255, 238, 0.5), rgba(153, 238, 214, 0.05)); 
+}
+
+.standard-model-row {
+  background-image: linear-gradient(145deg, rgba(204, 238, 255, 0.5), rgba(153, 204, 255, 0.05)); 
+}
+
+.human_expert {
+  background-color: rgba(255, 208, 80, 0.15);
+}
+
+.random_frequent {
+  background-color: #f4f9fe;
+  color: #808080;
+}
+
+.teaser .hero-body {
+  padding-top: 0;
+  padding-bottom: 3rem;
+}
+
+.teaser {
+  font-family: 'Google Sans', sans-serif;
+}
+
+.publication-links {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.publication-banner {
+  max-height: 100%;
+}
+
+.publication-banner video {
+  position: relative;
+  left: auto;
+  top: auto;
+  transform: none;
+  object-fit: contain;
+}
+
+.publication-header .hero-body {
+}
+
+.publication-title,
+.publication-authors {
+  font-family: 'Google Sans', sans-serif;
+}
+
+.publication-venue {
+  color: #555;
+  width: fit-content;
+  font-weight: bold;
+}
+
+.publication-awards {
+  color: #ff3860;
+  width: fit-content;
+  font-weight: bolder;
+}
+
+.publication-authors a {
+  color: hsl(204, 86%, 53%) !important;
+}
+
+.publication-authors a:hover {
+  text-decoration: underline;
+}
+
+.author-block {
+  display: inline-block;
+}
+
+.publication-banner img {
+}
+
+.publication-video {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  border-radius: 10px !important;
+}
+
+.publication-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.publication-body img {
+}
+
+.results-carousel {
+  overflow: hidden;
+}
+
+.stats-image {
+  max-height: 250px;
+}
+
+#org-banners {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.org-banner {
+  max-width: 100%;
+  height: 6em;
+  margin: 10px;
+  padding: 10px;
+}
+
+.chart-grid {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+.chart-item {
+  text-align: center;
+}
+
+.chart-label {
+  margin-top: 5px;
+}
+
+@media (min-width: 600px) {
+  .chart-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (min-width: 900px) {
+  .chart-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+.bottom-text {
+  margin-top: 30px;
+}
+
+.model-labels-container {
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.leaderboard-label {
+  display: inline-block;
+  padding: 5px 12px;
+  margin: 5px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.reasoning-model-label {
+  background-color: #e6fff0;
+  color: #006400;
+  border: 1px solid #b3ffcc;
+}
+
+.standard-model-label {
+  background-color: #e6f7ff;
+  color: #005f99;
+  border: 1px solid #b3e0ff;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 5px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.leaderboard-container {
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto;
+}
+
+.table-row {
+  display: flex;
+  width: 100%;
+}
+
+.sortable:hover {
+  cursor: pointer;
+}
+
+.asc::after {
+  content: ' ↑';
+}
+
+.desc::after {
+  content: ' ↓';
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 5px;
+  border: 1px solid #dddddd;
+  font-size: 14px;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+th {
+  background-color: #f2f2f2;
+  border-bottom: 2px solid #ddd;
+}
+
+td:hover {
+  background-color: #ffffff;
+}
+
+.main-header {
+  background-color: #e6e6e6;
+  font-weight: bold;
+  text-align: center;
+}
+
+.sub-header {
+  background-color: #f2f2f2;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover {
+  background-color: #d9d9d9;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  th, td {
+    min-width: 100px;
+  }
+}
+
+.table-wrapper {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+#mars-bench-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  overflow: hidden;
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: #222;
+}
+
+/* Shared styles for th and td */
+#mars-bench-table th,
+#mars-bench-table td {
+  padding: 18px 12px;
+  text-align: center;
+  border-bottom: 1px solid #ececec;
+  font-weight: 500;
+}
+
+/* Specific background for th */
+#mars-bench-table th {
+  background: #fff; /* Keep header cells white */
+  color: #222;
+  font-size: 1.12rem;
+  font-weight: bold;
+  border-bottom: 2px solid #e5e5e5;
+  letter-spacing: 0.01em;
+}
+
+/* Specific background for td to allow tr background to show */
+#mars-bench-table td {
+  background: transparent; /* Make data cells transparent */
+}
+
+#mars-bench-table td:first-child, #mars-bench-table th:first-child {
+  text-align: left;
+  padding-left: 24px;
+  min-width: 180px;
+  font-weight: bold;
+}
+
+#mars-bench-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* #mars-bench-table tbody tr {
+  background: #fafbfc; 
+} */ /* Commented out to allow .reasoning-model-row/.standard-model-row to take effect */
+
+/* #mars-bench-table tbody tr:nth-child(even) {
+  background: #f5f7fa;
+} */ /* Commented out to allow .reasoning-model-row/.standard-model-row to take effect */
+
+#mars-bench-table tbody tr:hover {
+  background: #eaf4fd;
+  transition: background 0.2s;
+}
+
+#mars-bench-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+@media (max-width: 900px) {
+  #mars-bench-table th, #mars-bench-table td {
+    padding: 10px 4px;
+    font-size: 0.98rem;
+  }
+  #mars-bench-table td:first-child, #mars-bench-table th:first-child {
+    min-width: 120px;
+    padding-left: 10px;
+  }
+}
+
+#dataset-search {
+  font-size: 1.25rem;               /* 稍微大一点 */
+  font-weight: 500;                 /* 中等字重 */
+  font-family: 'Noto Sans', sans-serif; /* 使用更圆润的字体 */
+  color: #363636;                   /* 深灰色，阅读性好 */
+}
+
+#dataset-search::placeholder {
+  color: #7a7a7a;                   /* 浅灰色 */
+  font-style: italic;               /* 斜体，区分占位 */
+}
+
+.field.has-icons-left .icon.is-left {
+  left: 0.75rem;
+}
+
+#dataset-list.menu-list {
+  max-height: 200px;
+  overflow-y: auto;
+  padding-right: 0.5rem;       /* 给滚动条留点空间 */
+}
+
+#dataset-list.menu-list li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  margin: 0;
+  border-radius: 4px;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+#dataset-list.menu-list li + li {
+  margin-top: 0.25rem;
+}
+
+#dataset-list.menu-list li .icon {
+  margin-right: 0.5rem;
+  color: #00d1b2;
+}
+
+#dataset-list.menu-list li:hover,
+#dataset-list.menu-list li.is-active {
+  background-color: #e8fffa;
+  transform: translateX(2px);
+  cursor: pointer;
+}
+
+#dataset-search:focus {
+  box-shadow: 0 0 0 0.2em rgba(0,209,178,0.25);
+  border-color: #00d1b2;
+}
+
+#dataset-details,
+#dataset-list {
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+}
+
+#dataset-details .content h3,
+#dataset-list .menu-list li {
+  color: #363636;
+}
+
+#toggleButton {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  color: #555555;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition-duration: 0.4s;
+}
+
+#toggleButton:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+th.sortable {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+th.sortable:hover {
+  background-color: #e0e0e0; 
+}
+
+th.sortable.asc,
+th.sortable.desc {
+  background-color: #d0d0d0; 
+}
+
+.table_header {
+  text-align: center;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(-20deg, rgba(183, 33, 255, 0.5) 0%, rgba(33, 212, 253, 0.5) 100%); 
+  padding: 10px; 
+  border-top-left-radius: 20px; 
+  border-top-right-radius: 20px; 
+  margin-bottom: -5px;  
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.071);
+}
+
+.table_header:hover {
+  background-color: #e0e0e0; 
+}
+
+.tab-content {
+  width: 100%; 
+}
+
+.scroll-box {
+  text-align: left; 
+  width: 600px; 
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px; 
+  border-radius: 10px; 
+  border: 2px solid rgba(0, 0, 0, 0.1); 
+  background-color: rgba(255, 255, 255, 0.9); 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1), 
+              0 -4px 20px rgba(255, 255, 255, 0.8); 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  font-size: 16px; 
+  color: #333; 
+  line-height: 1.6; 
+  transition: all 0.3s ease; 
+}
+
+.scroll-box:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2), 
+              0 -8px 20px rgba(255, 255, 255, 0.5);
+  transform: translateY(-4px); 
+}
+
+.scroll-box::-webkit-scrollbar {
+  width: 5px; 
+}
+
+.scroll-box::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  border-radius: 10px; 
+}
+
+.scroll-box::-webkit-scrollbar-track {
+  background: var(--scrollbar-color);
+}
+
+.scroll-box::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb-color); 
+  border-radius: 10px; 
+}
+
+#rule-content {
+  height: 310px; 
+  margin-bottom: 25px; 
+}
+
+#question-content {
+  height: 150px;
+  margin-bottom: 25px; 
+}
+
+#answer-content {
+  height: 100px; 
+}
+
+#model-response {
+  height: 700px; 
+}
+
+.controls {
+  display: flex; 
+  justify-content: center; 
+  margin-top: 20px; 
+  margin-left:-50px;
+}
+
+.controls .button {
+  margin: 10px;
+}
+
+#data-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#data-container th, #data-container td {
+  border: none; 
+  padding: 12px; 
+  text-align: center; 
+  transition: background-color 0.3s; 
+}
+
+#data-container tr:nth-child(even) {
+  background-color: #f9f9f9; 
+}
+
+#data-container td:hover, #data-container th:hover {
+  background-color: #f1f1f1; 
+}
+
+.controls {
+  justify-content: center;
+  margin-top: 1em; 
+}
+
+.button {
+  margin: 0 5px;
+}
+
+.tabs {
+  margin-left:-50px;
+}
+
+.tabs ul {
+  display: flex;
+  justify-content: center; 
+  padding-left: 0;
+  list-style-type: none; 
+}
+
+.tabs li {
+  margin: 0 10px; 
+}
+
+.tabs ul li a {
+  border-bottom: none; 
+  font-size: 14px;
+  font-weight: bold; 
+  color: #2c3e50;
+  text-shadow: 0.5px 0.5px 1px rgba(118, 112, 232, 0.5); 
+  border-radius: 4px; 
+  transition: background 0.3s; 
+}
+
+.tabs ul li a:hover {
+  background: rgba(0, 198, 255, 0.1);
+}
+
+/* —— 让所有表头允许换行 —— */
+#mars-bench-table th {
+  white-space: normal !important;
+  word-break: break-word !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+}
+
+/* —— Model 列（第一列）允许自动换行 —— */
+#mars-bench-table td:first-child {
+  white-space: normal !important;
+  word-break: break-word !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  max-width: 150px;  /* 根据需要调整 */
+}
+
+/* —— 其余数据列数字保持单行 —— */
+#mars-bench-table td:not(:first-child) {
+  white-space: nowrap !important;
+}
+
+/* Dataset Details：保留多行、多空格 */
+#dataset-details,
+#dataset-details .content,
+#dataset-details .content p {
+  white-space: pre-wrap !important;   /* 保留空格和换行 */
+  word-break: break-word !important;  /* 防止超长单词撑破布局 */
+}
+
+/* 如果你希望标题也能保留缩进的空格 */
+#dataset-details .content h3,
+#dataset-details .content h4 {
+  white-space: pre-wrap !important;
+}
+
+/* Dataset Task Cards Styling */
+.task-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  height: 100%; /* 确保卡片等高 */
+  display: flex;
+  flex-direction: column;
+}
+
+.task-card .title.is-4 {
+  margin-bottom: 0.75rem;
+  color: #363636;
+}
+
+.task-card .task-desc {
+  color: #555;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.task-card .subtask-group-container {
+  flex-grow: 1; /* Take up remaining vertical space in the card */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center the group of subtasks */
+}
+
+.task-card .subtask {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  padding: 0.5rem;
+  border-radius: 6px;
+  background-color: #f7f9fa;
+  border: 1px solid #eef2f5;
+  transition: box-shadow 0.2s ease-in-out;
+}
+.task-card .subtask:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.task-card .subtask-info {
+  flex-grow: 0;
+  flex-shrink: 1;
+  margin-right: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+.task-card .subtask-info b {
+  color: #3273dc;
+}
+
+.task-card .subtask-actions {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.task-card .subtask-count .tag {
+  white-space: nowrap;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* 响应式调整，让卡片在小屏幕上也好看 */
+@media screen and (max-width: 768px) {
+  .task-card .subtask {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .task-card .subtask-info {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Styles for Task Example Modal */
+.modal-card-body .content h4 {
+  margin-bottom: 0.5em;
+}
+
+.modal-card-body .content pre {
+  background-color: #f5f5f5;
+  padding: 1em;
+  border-radius: 4px;
+  white-space: pre-wrap;
+  word-break: break-all;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.modal-card-body .content pre code {
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.9em;
+  color: #333;
+}
+
+.view-example-button {
+  font-size: 0.8rem !important;
+  padding: 0.5em 0.8em !important;
+}

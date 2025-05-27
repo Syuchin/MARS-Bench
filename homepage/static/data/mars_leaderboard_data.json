@@ -1,0 +1,340 @@
+[
+    {
+        "model": "Gemini-2.5-Pro",
+        "type": "overall",
+        "thinking": true,
+        "Overall": "72.44",
+        "Instruction Following": "65.08",
+        "Context Retrieval": "87.06",
+        "Information Reasoning": "70.92",
+        "Task Switching": "66.72"
+    },
+    {
+        "model": "Claude-3.7-Sonnet-Thinking",
+        "type": "overall",
+        "thinking": true,
+        "Overall": "62.29",
+        "Instruction Following": "43.28",
+        "Context Retrieval": "71.51",
+        "Information Reasoning": "66.98",
+        "Task Switching": "67.38"
+    },
+    {
+        "model": "o1-1217",
+        "type": "overall",
+        "thinking": true,
+        "Overall": "59.62",
+        "Instruction Following": "53.09",
+        "Context Retrieval": "64.48",
+        "Information Reasoning": "62.63",
+        "Task Switching": "58.28"
+    },
+    {
+        "model": "Gemini-2.5-Flash",
+        "type": "overall",
+        "thinking": true,
+        "Overall": "59.22",
+        "Instruction Following": "45.96",
+        "Context Retrieval": "77.76",
+        "Information Reasoning": "52.93",
+        "Task Switching": "60.23"
+    },
+    {
+        "model": "GPT-4.5-Preview",
+        "type": "overall",
+        "thinking": false,
+        "Overall": "53.33",
+        "Instruction Following": "55.52",
+        "Context Retrieval": "66.65",
+        "Information Reasoning": "50.43",
+        "Task Switching": "40.74"
+    },
+    {
+        "model": "Doubao-1.5-Pro-Thinking",
+        "type": "overall",
+        "thinking": true,
+        "Overall": "52.62",
+        "Instruction Following": "51.99",
+        "Context Retrieval": "55.64",
+        "Information Reasoning": "52.17",
+        "Task Switching": "50.69"
+    },
+    {
+        "model": "Grok3",
+        "type": "overall",
+        "thinking": true,
+        "Overall": "51.21",
+        "Instruction Following": "61.19",
+        "Context Retrieval": "73.91",
+        "Information Reasoning": "33.89",
+        "Task Switching": "35.87"
+    },
+    {
+        "model": "o4-mini-0416",
+        "type": "overall",
+        "thinking": true,
+        "Overall": "47.13",
+        "Instruction Following": "47.48",
+        "Context Retrieval": "61.26",
+        "Information Reasoning": "39.74",
+        "Task Switching": "40.03"
+    },
+    {
+        "model": "DeepSeek-R1",
+        "type": "overall",
+        "thinking": true,
+        "Overall": "45.42",
+        "Instruction Following": "53.04",
+        "Context Retrieval": "49.23",
+        "Information Reasoning": "40.01",
+        "Task Switching": "39.40"
+    },
+    {
+        "model": "Claude-3.5-Sonnet",
+        "type": "overall",
+        "thinking": false,
+        "Overall": "43.17",
+        "Instruction Following": "44.45",
+        "Context Retrieval": "52.09",
+        "Information Reasoning": "39.03",
+        "Task Switching": "37.09"
+    },
+    {
+        "model": "o3-mini-high",
+        "type": "overall",
+        "thinking": true,
+        "Overall": "42.15",
+        "Instruction Following": "53.16",
+        "Context Retrieval": "50.68",
+        "Information Reasoning": "32.58",
+        "Task Switching": "32.18"
+    },
+    {
+        "model": "Claude-3.7-Sonnet",
+        "type": "overall",
+        "thinking": false,
+        "Overall": "41.21",
+        "Instruction Following": "34.13",
+        "Context Retrieval": "59.77",
+        "Information Reasoning": "36.80",
+        "Task Switching": "34.15"
+    },
+    {
+        "model": "o3-mini-medium",
+        "type": "overall",
+        "thinking": true,
+        "Overall": "39.25",
+        "Instruction Following": "52.17",
+        "Context Retrieval": "42.66",
+        "Information Reasoning": "32.31",
+        "Task Switching": "29.84"
+    },
+    {
+        "model": "Doubao-1.5-Pro-32k",
+        "type": "overall",
+        "thinking": false,
+        "Overall": "38.88",
+        "Instruction Following": "42.80",
+        "Context Retrieval": "46.81",
+        "Information Reasoning": "33.63",
+        "Task Switching": "32.28"
+    },
+    {
+        "model": "DeepSeek-V3-0324",
+        "type": "overall",
+        "thinking": true,
+        "Overall": "37.31",
+        "Instruction Following": "45.34",
+        "Context Retrieval": "46.18",
+        "Information Reasoning": "27.70",
+        "Task Switching": "30.02"
+    },
+    {
+        "model": "GPT-4o-1120",
+        "type": "overall",
+        "thinking": false,
+        "Overall": "35.83",
+        "Instruction Following": "39.28",
+        "Context Retrieval": "31.26",
+        "Information Reasoning": "36.69",
+        "Task Switching": "36.12"
+    },
+    {
+        "model": "Gemini-2.0-Flash",
+        "type": "overall",
+        "thinking": false,
+        "Overall": "35.61",
+        "Instruction Following": "48.56",
+        "Context Retrieval": "39.24",
+        "Information Reasoning": "26.71",
+        "Task Switching": "27.92"
+    },
+    {
+        "model": "Qwen3-235B",
+        "type": "overall",
+        "thinking": true,
+        "Overall": "34.88",
+        "Instruction Following": "42.47",
+        "Context Retrieval": "39.42",
+        "Information Reasoning": "28.03",
+        "Task Switching": "29.59"
+    },
+    {
+        "model": "DeepSeek-V3-1226",
+        "type": "overall",
+        "thinking": true,
+        "Overall": "33.16",
+        "Instruction Following": "37.23",
+        "Context Retrieval": "37.08",
+        "Information Reasoning": "28.71",
+        "Task Switching": "29.63"
+    },
+    {
+        "model": "GPT-4.1-mini-0414",
+        "type": "overall",
+        "thinking": false,
+        "Overall": "31.23",
+        "Instruction Following": "40.23",
+        "Context Retrieval": "30.17",
+        "Information Reasoning": "26.39",
+        "Task Switching": "28.13"
+    },
+    {
+        "model": "Qwen2.5-Max",
+        "type": "overall",
+        "thinking": false,
+        "Overall": "30.41",
+        "Instruction Following": "39.77",
+        "Context Retrieval": "31.90",
+        "Information Reasoning": "26.76",
+        "Task Switching": "23.22"
+    },
+    {
+        "model": "Qwen2.5-72B-Instruct",
+        "type": "overall",
+        "thinking": false,
+        "Overall": "29.21",
+        "Instruction Following": "38.38",
+        "Context Retrieval": "30.41",
+        "Information Reasoning": "24.06",
+        "Task Switching": "23.97"
+    },
+    {
+        "model": "GLM-Z1-Air",
+        "type": "overall",
+        "thinking": true,
+        "Overall": "25.84",
+        "Instruction Following": "35.75",
+        "Context Retrieval": "22.49",
+        "Information Reasoning": "24.36",
+        "Task Switching": "20.76"
+    },
+    {
+        "model": "Gemini-2.5-Pro",
+        "type": "instruction-following",
+        "thinking": true,
+        "Multi-step Instructions": "68.5",
+        "Turn-level Structure": "61.2",
+        "Output Alignment": "65.6",
+        "Average": "65.08"
+    },
+    {
+        "model": "GPT-4.5-Preview",
+        "type": "instruction-following", 
+        "thinking": false,
+        "Multi-step Instructions": "58.7",
+        "Turn-level Structure": "52.1",
+        "Output Alignment": "55.8",
+        "Average": "55.52"
+    },
+    {
+        "model": "DeepSeek-R1",
+        "type": "instruction-following",
+        "thinking": true,
+        "Multi-step Instructions": "56.2",
+        "Turn-level Structure": "49.3",
+        "Output Alignment": "53.6",
+        "Average": "53.04"
+    },
+    {
+        "model": "Gemini-2.5-Pro",
+        "type": "context-retrieval",
+        "thinking": true,
+        "Distant Retrieval": "89.3",
+        "Information Accuracy": "85.2",
+        "Context Tracking": "86.7",
+        "Average": "87.06"
+    },
+    {
+        "model": "Gemini-2.5-Flash",
+        "type": "context-retrieval",
+        "thinking": true,
+        "Distant Retrieval": "79.8",
+        "Information Accuracy": "75.1",
+        "Context Tracking": "78.4",
+        "Average": "77.76"
+    },
+    {
+        "model": "Claude-3.7-Sonnet-Thinking",
+        "type": "context-retrieval",
+        "thinking": true,
+        "Distant Retrieval": "73.2",
+        "Information Accuracy": "69.4",
+        "Context Tracking": "72.0",
+        "Average": "71.51"
+    },
+    {
+        "model": "Gemini-2.5-Pro",
+        "type": "information-reasoning",
+        "thinking": true,
+        "Multi-source Integration": "73.8",
+        "Logical Reasoning": "68.2",
+        "Cross-turn Inference": "70.7",
+        "Average": "70.92"
+    },
+    {
+        "model": "Claude-3.7-Sonnet-Thinking",
+        "type": "information-reasoning",
+        "thinking": true,
+        "Multi-source Integration": "69.1",
+        "Logical Reasoning": "64.5",
+        "Cross-turn Inference": "67.3",
+        "Average": "66.98"
+    },
+    {
+        "model": "o1-1217",
+        "type": "information-reasoning",
+        "thinking": true,
+        "Multi-source Integration": "65.2",
+        "Logical Reasoning": "59.8",
+        "Cross-turn Inference": "62.9",
+        "Average": "62.63"
+    },
+    {
+        "model": "Claude-3.7-Sonnet-Thinking",
+        "type": "task-switching",
+        "thinking": true,
+        "Task Recognition": "70.1",
+        "Adaptation Speed": "64.2",
+        "Context Maintenance": "67.8",
+        "Average": "67.38"
+    },
+    {
+        "model": "Gemini-2.5-Pro",
+        "type": "task-switching",
+        "thinking": true,
+        "Task Recognition": "69.3",
+        "Adaptation Speed": "63.8",
+        "Context Maintenance": "67.1",
+        "Average": "66.72"
+    },
+    {
+        "model": "Gemini-2.5-Flash",
+        "type": "task-switching",
+        "thinking": true,
+        "Task Recognition": "62.7",
+        "Adaptation Speed": "57.4",
+        "Context Maintenance": "60.6",
+        "Average": "60.23"
+    }
+] 
