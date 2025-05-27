@@ -21,30 +21,30 @@ document.addEventListener('DOMContentLoaded', function() {
   let rawData = [], scores = {};
 
   // 存放从 dataset.json 加载的数据集组件
-  let datasetComponents = [];
+  // let datasetComponents = []; // Removed as it's not used
 
   // DOM 元素引用
   const toggleEl      = document.getElementById('toggle-model-type');
   const table         = document.getElementById('mars-bench-table');
-  const searchInput   = document.getElementById('dataset-search');
-  const suggestionBox = document.getElementById('dataset-list');
-  const detailsBox    = document.getElementById('dataset-details');
+  // const searchInput   = document.getElementById('dataset-search'); // Removed as it's not used
+  // const suggestionBox = document.getElementById('dataset-list'); // Removed as it's not used
+  // const detailsBox    = document.getElementById('dataset-details'); // Removed as it's not used
 
-  // 1. 加载 dataset.json
-  fetch('./static/data/dataset.json')
-    .then(resp => {
-      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-      return resp.json();
-    })
-    .then(json => {
-      datasetComponents = json;  // 假设 JSON 是 [{ name, description, example }, …]
-      // 初始化提示文字
-      detailsBox.innerHTML = `<p class="has-text-grey">Enter a dataset component name and click it below to see its details.</p>`;
-    })
-    .catch(err => {
-      console.error('Error loading dataset.json:', err);
-      detailsBox.innerHTML = `<p class="has-text-danger">Failed to load dataset components.</p>`;
-    });
+  // 1. 加载 dataset.json // Removed as it's not used
+  // fetch('./static/data/dataset.json')
+  //   .then(resp => {
+  //     if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+  //     return resp.json();
+  //   })
+  //   .then(json => {
+  //     datasetComponents = json;  // 假设 JSON 是 [{ name, description, example }, …]
+  //     // 初始化提示文字
+  //     detailsBox.innerHTML = `<p class="has-text-grey">Enter a dataset component name and click it below to see its details.</p>`;
+  //   })
+  //   .catch(err => {
+  //     console.error('Error loading dataset.json:', err);
+  //     detailsBox.innerHTML = `<p class="has-text-danger">Failed to load dataset components.</p>`;
+  //   });
 
   // 2. 加载 leaderboard 数据
   fetch('./static/data/mars_leaderboard_data.json')
@@ -70,68 +70,70 @@ document.addEventListener('DOMContentLoaded', function() {
     renderTable();
   });
 
-  // 搜索建议（匹配名称，纵向列出）
-  searchInput.addEventListener('input', e => {
-    const term = e.target.value.trim().toLowerCase();
-    suggestionBox.innerHTML = '';
-    if (!term) return;
+  // 搜索建议（匹配名称，纵向列出） // Removed as it's not used
+  // searchInput.addEventListener('input', e => {
+  //   const term = e.target.value.trim().toLowerCase();
+  //   suggestionBox.innerHTML = '';
+  //   if (!term) return;
+  //
+  //   datasetComponents
+  //     .filter(d => d.name.toLowerCase().includes(term))
+  //     .forEach(d => {
+  //       const li = document.createElement('li');
+  //       li.innerHTML = `
+  //         <span class="icon"><i class="fas fa-database"></i></span>
+  //         <span>${d.name}</span>
+  //       `;
+  //       li.style.display = 'flex';
+  //       li.style.alignItems = 'center';
+  //       li.addEventListener('click', () => {
+  //         searchInput.value = d.name;
+  //         displayDatasetDetails(d);
+  //         suggestionBox.innerHTML = '';
+  //       });
+  //       suggestionBox.appendChild(li);
+  //     });
+  // });
 
-    datasetComponents
-      .filter(d => d.name.toLowerCase().includes(term))
-      .forEach(d => {
-        const li = document.createElement('li');
-        li.innerHTML = `
-          <span class="icon"><i class="fas fa-database"></i></span>
-          <span>${d.name}</span>
-        `;
-        li.style.display = 'flex';
-        li.style.alignItems = 'center';
-        li.addEventListener('click', () => {
-          searchInput.value = d.name;
-          displayDatasetDetails(d);
-          suggestionBox.innerHTML = '';
-        });
-        suggestionBox.appendChild(li);
-      });
-  });
-
-  // 根据数据集对象显示详细信息
-  function displayDatasetDetails(dataset) {
-  let html = `
-    <div class="content" style="white-space: pre-wrap;">
-      <h3 class="title is-3 has-text-centered" style="font-weight: bold;">
-        ${dataset.name}
-      </h3>
-
-      <!-- Dataset Description -->
-      <h4 class="subtitle is-5">Description</h4>
-      <p>${dataset.description ? dataset.description.replace(/\n/g, '<br>') : 'Description not available'}</p>
-
-      <!-- Dataset Example -->
-      <h4 class="subtitle is-5">Example</h4>
-  `;
-
-  // 文本示例有的话先渲染，并保留换行
-  if (dataset.example) {
-    html += `<p>${dataset.example.replace(/\n/g, '<br>')}</p>`;
-  }
-
-  // 图片示例有的话再渲染
-  if (dataset.exampleImage) {
-    html += `
-      <figure class="image" style="margin-top:1rem;">
-        <img
-          src="./static/images/${dataset.exampleImage}"
-          alt="${dataset.name} example"
-          style="max-width:100%; height:auto; width:auto;"
-        />
-      </figure>
-    `;
-  }
-
-  html += `</div>`;
-  detailsBox.innerHTML = html;
-}
+  // 根据数据集对象显示详细信息 // Removed as it's not used
+  // function displayDatasetDetails(dataset) {
+  // let html = `
+  //   <div class="content" style="white-space: pre-wrap;">
+  //     <h3 class="title is-3 has-text-centered" style="font-weight: bold;">
+  //       ${dataset.name}
+  //     </h3>
+  //
+  //     <!-- Dataset Description -->
+  //     <h4 class="subtitle is-5">Description</h4>
+  //     <p>${dataset.description ? dataset.description.replace(/
+/g, '<br>') : 'Description not available'}</p>
+  //
+  //     <!-- Dataset Example -->
+  //     <h4 class="subtitle is-5">Example</h4>
+  // `;
+  //
+  // // 文本示例有的话先渲染，并保留换行
+  // if (dataset.example) {
+  //   html += `<p>${dataset.example.replace(/
+/g, '<br>')}</p>`;
+  // }
+  //
+  // // 图片示例有的话再渲染
+  // if (dataset.exampleImage) {
+  //   html += `
+  //     <figure class="image" style="margin-top:1rem;">
+  //       <img
+  //         src="./static/images/${dataset.exampleImage}"
+  //         alt="${dataset.name} example"
+  //         style="max-width:100%; height:auto; width:auto;"
+  //       />
+  //     </figure>
+  //   `;
+  // }
+  //
+  // html += `</div>`;
+  // detailsBox.innerHTML = html;
+  // }
 
   // 预计算排名
   function computeScores(arr) {
