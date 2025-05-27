@@ -6,10 +6,10 @@
 <p align="center">
   <a href="https://github.com/syuchin/MARS-Bench/stargazers">
     <img src="https://img.shields.io/github/stars/syuchin/MARS-Bench?style=social"></a>
-  <a href="https://yourusername.github.io/MARS-Bench-HomePage/">
-    <img src="https://img.shields.io/badge/MARS-Bench-Project Page-green"></a>
+  <a href="https://syuchin.github.io/MARS-Bench/">
+    <img src="https://img.shields.io/badge/MARS--Bench-Project%20Page-green"></a>
   <a href="https://arxiv.org/abs/2505.14552">
-    <img src="https://img.shields.io/badge/MARS-Bench-Arxiv-yellow"></a>
+    <img src="https://img.shields.io/badge/MARS--Bench-Arxiv-yellow"></a>
   <a href="LICENSE">
     <img src="https://img.shields.io/badge/License-Apache--2.0-blue"></a>
 </p>
