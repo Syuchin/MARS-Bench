@@ -173,4 +173,4 @@ def main():
 if __name__ == "__main__":
     main()
 
-# python chat.py --input_file data/Questions/test.jsonl --output_path result/chat-result/chat-test.json
+# python chat.py --input_file data/test.jsonl --output_path result/chat-result/chat-test.json
