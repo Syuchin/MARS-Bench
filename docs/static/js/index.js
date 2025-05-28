@@ -20,31 +20,9 @@ document.addEventListener('DOMContentLoaded', function() {
   // 存储从后端获取的原始 leaderboard 数据及预计算的排名
   let rawData = [], scores = {};
 
-  // 存放从 dataset.json 加载的数据集组件
-  let datasetComponents = [];
-
   // DOM 元素引用
   const toggleEl      = document.getElementById('toggle-model-type');
   const table         = document.getElementById('mars-bench-table');
-  const searchInput   = document.getElementById('dataset-search');
-  const suggestionBox = document.getElementById('dataset-list');
-  const detailsBox    = document.getElementById('dataset-details');
-
-  // 1. 加载 dataset.json
-  fetch('./static/data/dataset.json')
-    .then(resp => {
-      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-      return resp.json();
-    })
-    .then(json => {
-      datasetComponents = json;  // 假设 JSON 是 [{ name, description, example }, …]
-      // 初始化提示文字
-      detailsBox.innerHTML = `<p class="has-text-grey">Enter a dataset component name and click it below to see its details.</p>`;
-    })
-    .catch(err => {
-      console.error('Error loading dataset.json:', err);
-      detailsBox.innerHTML = `<p class="has-text-danger">Failed to load dataset components.</p>`;
-    });
 
   // 2. 加载 leaderboard 数据
   fetch('./static/data/mars_leaderboard_data.json')
@@ -54,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     .then(json => {
       rawData = json.map((r, i) => ({ ...r, __idx: i }));
-      scores  = computeScores(rawData);
+      scores = computeScores(rawData);
       renderTable();
     })
     .catch(err => {
@@ -69,69 +47,6 @@ document.addEventListener('DOMContentLoaded', function() {
     toggleEl.textContent = `Segment: ${segments[current]} (Tap to switch to ${next})`;
     renderTable();
   });
-
-  // 搜索建议（匹配名称，纵向列出）
-  searchInput.addEventListener('input', e => {
-    const term = e.target.value.trim().toLowerCase();
-    suggestionBox.innerHTML = '';
-    if (!term) return;
-
-    datasetComponents
-      .filter(d => d.name.toLowerCase().includes(term))
-      .forEach(d => {
-        const li = document.createElement('li');
-        li.innerHTML = `
-          <span class="icon"><i class="fas fa-database"></i></span>
-          <span>${d.name}</span>
-        `;
-        li.style.display = 'flex';
-        li.style.alignItems = 'center';
-        li.addEventListener('click', () => {
-          searchInput.value = d.name;
-          displayDatasetDetails(d);
-          suggestionBox.innerHTML = '';
-        });
-        suggestionBox.appendChild(li);
-      });
-  });
-
-  // 根据数据集对象显示详细信息
-  function displayDatasetDetails(dataset) {
-  let html = `
-    <div class="content" style="white-space: pre-wrap;">
-      <h3 class="title is-3 has-text-centered" style="font-weight: bold;">
-        ${dataset.name}
-      </h3>
-
-      <!-- Dataset Description -->
-      <h4 class="subtitle is-5">Description</h4>
-      <p>${dataset.description ? dataset.description.replace(/\n/g, '<br>') : 'Description not available'}</p>
-
-      <!-- Dataset Example -->
-      <h4 class="subtitle is-5">Example</h4>
-  `;
-
-  // 文本示例有的话先渲染，并保留换行
-  if (dataset.example) {
-    html += `<p>${dataset.example.replace(/\n/g, '<br>')}</p>`;
-  }
-
-  // 图片示例有的话再渲染
-  if (dataset.exampleImage) {
-    html += `
-      <figure class="image" style="margin-top:1rem;">
-        <img
-          src="./static/images/${dataset.exampleImage}"
-          alt="${dataset.name} example"
-          style="max-width:100%; height:auto; width:auto;"
-        />
-      </figure>
-    `;
-  }
-
-  html += `</div>`;
-  detailsBox.innerHTML = html;
-}
 
   // 预计算排名
   function computeScores(arr) {
@@ -234,6 +149,50 @@ document.addEventListener('DOMContentLoaded', function() {
         : bT.localeCompare(aT, undefined, { numeric: true });
     });
     rows.forEach(r => table.querySelector('tbody').appendChild(r));
+  }
+
+  // Modal functionality
+  const exampleModal = document.getElementById('exampleModal');
+  const exampleModalTitle = document.getElementById('exampleModalTitle');
+  const exampleModalQuestion = document.getElementById('exampleModalQuestion');
+  const exampleModalAnswer = document.getElementById('exampleModalAnswer');
+  const exampleModalChecklist = document.getElementById('exampleModalChecklist');
+  const exampleModalClose = document.getElementById('exampleModalClose');
+  const modalBackground = exampleModal ? exampleModal.querySelector('.modal-background') : null;
+
+  const viewExampleButtons = document.querySelectorAll('.view-example-button');
+
+  if (viewExampleButtons && exampleModal && exampleModalTitle && exampleModalQuestion && exampleModalAnswer && exampleModalChecklist && exampleModalClose && modalBackground) {
+    viewExampleButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const exampleKey = button.dataset.exampleKey;
+        const exampleData = taskExamples[exampleKey];
+
+        if (exampleData) {
+          exampleModalTitle.textContent = exampleData.title || 'Task Example';
+          exampleModalQuestion.textContent = exampleData.question || 'No question provided.';
+          exampleModalAnswer.textContent = exampleData.answer || 'No answer provided.';
+          exampleModalChecklist.textContent = exampleData.checklist || 'No checklist provided.';
+          exampleModal.classList.add('is-active');
+        } else {
+          exampleModalTitle.textContent = 'Error';
+          exampleModalQuestion.textContent = `Example data for "${exampleKey}" not found.`;
+          exampleModalAnswer.textContent = '';
+          exampleModalChecklist.textContent = '';
+          console.error(`Example data for "${exampleKey}" not found. Check 'taskExamples' in index.js and 'data-example-key' in HTML.`);
+          exampleModal.classList.add('is-active');
+        }
+      });
+    });
+
+    const closeModal = () => {
+      exampleModal.classList.remove('is-active');
+    };
+
+    exampleModalClose.addEventListener('click', closeModal);
+    modalBackground.addEventListener('click', closeModal);
+  } else {
+    console.error("Modal elements or view example buttons not found. Check HTML structure and IDs.");
   }
 });
 
@@ -507,41 +466,3 @@ L. Both anomaly detection and outlier detection are correct`,
 }`
   }
 };
-
-document.addEventListener('DOMContentLoaded', () => {
-  // ... (rest of the existing DOMContentLoaded logic for leaderboard, dataset details etc.)
-
-  // Modal functionality
-  const exampleModal = document.getElementById('exampleModal');
-  const exampleModalTitle = document.getElementById('exampleModalTitle');
-  const exampleModalQuestion = document.getElementById('exampleModalQuestion');
-  const exampleModalAnswer = document.getElementById('exampleModalAnswer');
-  const exampleModalChecklist = document.getElementById('exampleModalChecklist');
-  const exampleModalClose = document.getElementById('exampleModalClose');
-  const modalBackground = exampleModal.querySelector('.modal-background');
-
-  const viewExampleButtons = document.querySelectorAll('.view-example-button');
-
-  viewExampleButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const exampleKey = button.dataset.exampleKey;
-      const exampleData = taskExamples[exampleKey];
-
-      if (exampleData) {
-        exampleModalTitle.textContent = exampleData.title || 'Task Example';
-        exampleModalQuestion.textContent = exampleData.question;
-        exampleModalAnswer.textContent = exampleData.answer;
-        exampleModalChecklist.textContent = exampleData.checklist;
-        exampleModal.classList.add('is-active');
-      }
-    });
-  });
-
-  const closeModal = () => {
-    exampleModal.classList.remove('is-active');
-  };
-
-  exampleModalClose.addEventListener('click', closeModal);
-  modalBackground.addEventListener('click', closeModal);
-
-});

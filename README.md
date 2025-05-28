@@ -6,13 +6,23 @@
 <p align="center">
   <a href="https://github.com/syuchin/MARS-Bench/stargazers">
     <img src="https://img.shields.io/github/stars/syuchin/MARS-Bench?style=social"></a>
-  <a href="https://yourusername.github.io/MARS-Bench-HomePage/">
-    <img src="https://img.shields.io/badge/MARS-Bench-Project Page-green"></a>
+  <a href="https://syuchin.github.io/MARS-Bench/">
+    <img src="https://img.shields.io/badge/MARS--Bench-Project%20Page-green"></a>
   <a href="https://arxiv.org/abs/2505.14552">
-    <img src="https://img.shields.io/badge/MARS-Bench-Arxiv-yellow"></a>
+    <img src="https://img.shields.io/badge/MARS--Bench-Arxiv-yellow"></a>
   <a href="LICENSE">
     <img src="https://img.shields.io/badge/License-Apache--2.0-blue"></a>
 </p>
+</div>
+
+<div align="center">
+
+Chenghao Yang<sup style="color:#8a2be2;">1,2</sup><sup style="color:#ff6b6b;">\*</sup><sup style="color:#4ecdc4;">‡</sup>, Yinbo Luo<sup style="color:#4682b4;">2</sup><sup style="color:#ff6b6b;">\*</sup>, Zhoufutu Wen<sup style="color:#8a2be2;">1</sup><sup style="color:#2e8b57;">†</sup>, Qi Chu<sup style="color:#4682b4;">2</sup><sup style="color:#2e8b57;">†</sup>, Tao Gong<sup style="color:#4682b4;">2</sup>, Longxiang Liu<sup style="color:#8a2be2;">1</sup>, Kaiyuan Zhang<sup style="color:#8a2be2;">1</sup>, Jianpeng Jiao<sup style="color:#8a2be2;">1</sup>, Ge Zhang<sup style="color:#8a2be2;">1</sup>, Wenhao Huang<sup style="color:#8a2be2;">1</sup>, Nenghai Yu<sup style="color:#4682b4;">2</sup>
+
+<sup style="color:#8a2be2;">1</sup>ByteDance Seed, <sup style="color:#4682b4;">2</sup>University of Science and Technology of China
+
+<sup style="color:#ff6b6b;">*</sup>Equal Contribution, <sup style="color:#2e8b57;">†</sup>Corresponding Authors, <sup style="color:#4ecdc4;">‡</sup>Work done at ByteDance Seed
+
 </div>
 
 ---
