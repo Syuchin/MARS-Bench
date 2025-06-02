@@ -8,7 +8,7 @@
     <img src="https://img.shields.io/github/stars/syuchin/MARS-Bench?style=social"></a>
   <a href="https://syuchin.github.io/MARS-Bench/">
     <img src="https://img.shields.io/badge/MARS--Bench-Project%20Page-green"></a>
-  <a href="https://arxiv.org/abs/2505.14552">
+  <a href="https://arxiv.org/abs/2505.23810">
     <img src="https://img.shields.io/badge/MARS--Bench-Arxiv-yellow"></a>
   <a href="LICENSE">
     <img src="https://img.shields.io/badge/License-Apache--2.0-blue"></a>
@@ -104,3 +104,19 @@ python eval/eval.py --input result/chat-result/chat-test.json --output result/ev
 
 * `chat-result/`: Dialogue outputs (e.g., `demo.json`).
 * `eval-result/`: Evaluation results.
+
+---
+
+## 📄 Citation
+
+```bibtex
+@article{MARS-Bench,
+title={MARS-Bench: A Multi-turn Athletic Real-world Scenario Benchmark for Dialogue Evaluation}, 
+author={Chenghao Yang, Yinbo Luo, Zhoufutu Wen, Qi Chu, Tao Gong, Longxiang Liu, Kaiyuan Zhang, Jianpeng Jiao, Ge Zhang, Wenhao Huang, Nenghai Yu}, 
+year={2025},
+eprint={2505.23810},
+archivePrefix={arXiv},
+primaryClass={cs.CL},
+url={https://arxiv.org/abs/2505.23810}, 
+}
+```
