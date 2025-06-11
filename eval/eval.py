@@ -4,8 +4,7 @@ import logging
 import os
 import sys
 import argparse
-import numpy as np
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict
 
 # Setup logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -456,4 +455,4 @@ def main():
 if __name__ == "__main__":
     main()
 
-# python eval.py --input /MARS-Bench/result/chat-result/chat-test.json --output /MARS-Bench/result/eval-result/chat-test-eval.json
+# python eval.py --input /sport-memory/MARS-Bench/result/chat-result/chat-test.json --output /sport-memory/MARS-Bench/result/eval-result/chat-test-eval.json

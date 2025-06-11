@@ -1,5 +1,4 @@
 import yaml
-import os
 
 class ConfigWrapper:
     def __init__(self, config):

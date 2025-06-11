@@ -1,5 +1,4 @@
 import requests
-import json
 import os
 import sys
 from tenacity import retry, stop_after_attempt, wait_exponential
