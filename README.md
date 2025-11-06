@@ -110,13 +110,31 @@ python eval/eval.py --input result/chat-result/chat-test.json --output result/ev
 ## 📄 Citation
 
 ```bibtex
-@article{MARS-Bench,
-title={MARS-Bench: A Multi-turn Athletic Real-world Scenario Benchmark for Dialogue Evaluation}, 
-author={Chenghao Yang, Yinbo Luo, Zhoufutu Wen, Qi Chu, Tao Gong, Longxiang Liu, Kaiyuan Zhang, Jianpeng Jiao, Ge Zhang, Wenhao Huang, Nenghai Yu}, 
-year={2025},
-eprint={2505.23810},
-archivePrefix={arXiv},
-primaryClass={cs.CL},
-url={https://arxiv.org/abs/2505.23810}, 
+@inproceedings{MARS-Bench,
+    title = "{MARS}-Bench: A Multi-turn Athletic Real-world Scenario Benchmark for Dialogue Evaluation",
+    author = "Yang, Chenghao  and
+      Luo, Yinbo  and
+      Wen, Zhoufutu  and
+      Chu, Qi  and
+      Gong, Tao  and
+      Liu, Longxiang  and
+      Zhang, Kaiyuan  and
+      Jiao, Jianpeng  and
+      Zhang, Ge  and
+      Huang, Wenhao  and
+      Yu, Nenghai",
+    editor = "Christodoulopoulos, Christos  and
+      Chakraborty, Tanmoy  and
+      Rose, Carolyn  and
+      Peng, Violet",
+    booktitle = "Findings of the Association for Computational Linguistics: EMNLP 2025",
+    month = nov,
+    year = "2025",
+    address = "Suzhou, China",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.findings-emnlp.314/",
+    pages = "5872--5898",
+    ISBN = "979-8-89176-335-7",
+    abstract = "Large Language Models (\textbf{LLMs}), e.g. ChatGPT, have been widely adopted in real-world dialogue applications. However, LLMs' robustness, especially in handling long complex dialogue sessions, including frequent motivation transfer, sophisticated cross-turn dependency, is criticized all along. Nevertheless, no existing benchmarks can fully reflect these weaknesses. We present \textbf{MARS-Bench}, a \textbf{M}ulti-turn \textbf{A}thletic \textbf{R}eal-world \textbf{S}cenario Dialogue \textbf{Bench}mark, designed to remedy the gap. MARS-Bench is constructed from play-by-play text commentary so to feature realistic dialogues specifically designed to evaluate three critical aspects of multi-turn conversations: ultra multi-turn, interactive multi-turn, and cross-turn tasks. Extensive experiments on MARS-Bench also reveal that closed-source LLMs significantly outperform open-source alternatives, explicit reasoning significantly boosts LLMs' robustness on handling long complex dialogue sessions, and LLMs indeed face significant challenge when handling motivation transfer and sophisticated cross-turn dependency. Moreover, we provide mechanistic interpretability on how attention sinks due to special tokens lead to LLMs' performance degradation when handling long complex dialogue sessions based on attention visualization experiment in Qwen2.5-7B-Instruction."
 }
 ```
